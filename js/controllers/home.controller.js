@@ -1,4 +1,4 @@
-let HomeController = function($scope, PARSE, HomeService) {
+let HomeController = function($state, $scope, PARSE, HomeService) {
   
   // Name field validation
   let validateName = (name) => {
@@ -59,13 +59,13 @@ let HomeController = function($scope, PARSE, HomeService) {
 
   function submitForm (msgObj) {
     HomeService.submitForm(msgObj).then( (res) => {
-      console.log(res);
+      $state.go('root.comments');
     });
   }
 
 
 };
 
-HomeController.$inject = ['$scope', 'PARSE', 'HomeService'];
+HomeController.$inject = ['$state', '$scope', 'PARSE', 'HomeService'];
 
 export default HomeController;

@@ -54,6 +54,7 @@ var CommentsController = function CommentsController($scope, HomeService) {
 
   HomeService.getAllMessages().then(function (res) {
     $scope.messages = res.data.results;
+    console.log(res);
   });
 };
 
@@ -68,7 +69,7 @@ module.exports = exports['default'];
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var HomeController = function HomeController($scope, PARSE, HomeService) {
+var HomeController = function HomeController($state, $scope, PARSE, HomeService) {
 
   // Name field validation
   var validateName = function validateName(name) {
@@ -135,12 +136,12 @@ var HomeController = function HomeController($scope, PARSE, HomeService) {
 
   function submitForm(msgObj) {
     HomeService.submitForm(msgObj).then(function (res) {
-      console.log(res);
+      $state.go('root.comments');
     });
   }
 };
 
-HomeController.$inject = ['$scope', 'PARSE', 'HomeService'];
+HomeController.$inject = ['$state', '$scope', 'PARSE', 'HomeService'];
 
 exports['default'] = HomeController;
 module.exports = exports['default'];

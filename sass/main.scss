@@ -25,3 +25,23 @@ body {
     }
   }
 }
+
+.comments {
+
+  ul {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    display: inline-block;
+
+    li {
+
+
+    }
+  }
+
+  button {
+    margin: 10px;
+  }
+}

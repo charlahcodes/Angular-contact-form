@@ -1,11 +1,12 @@
-<h3>Comments</h3>
-
-<div class="photoList">
-  <div class="thumbnails">
-    <ul>
-      <li ng-repeat="message in messages">
-        <p>{{message.name}}</p>
-      </li>
+<div class="comments">
+  <h3>Comments</h3>
+  <div>
+    <ul ng-repeat="message in messages">
+      <li>Name: {{message.name}}</li>
+      <li>Email: <a href="mailto:{{message.email}}">{{message.email}}</a></li>
+      <li>Url: <a href="{{message.address}}">{{message.address}}</a></li>
+      <li>Message: {{message.message}}</li>
     </ul>
   </div>
+  <a href="#/"><button>Home</button></a>
 </div>

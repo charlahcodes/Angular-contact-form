@@ -1,6 +1,6 @@
 <div class="messageForm row">
   <h3>Contact Us</h3>
-  <form ng-submit="vm.submitForm(message)">
+  <form ng-submit="vm.submitForm(message)" name="commentsForm">
     <input ng-model="message.name" placeholder="Sally Smith" >
     <small>{{ nameMsg }}</small>
     <input ng-model="message.email" placeholder="ssmith@gmail.com" >
@@ -9,6 +9,7 @@
     <small>{{ addressMsg }}</small>
     <textarea ng-model="message.message" placeholder="A friendly message..."></textarea>
     <small>{{ messageMsg }}</small>
-    <button>Submit</button>
+    <button ng-disabled="commentsForm.$invalid">Submit</button>
   </form>
+  <a href="#/comments"><button>View</button></a>
 </div>
