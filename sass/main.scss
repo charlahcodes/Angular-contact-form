@@ -1,0 +1,27 @@
+// Put any @imports here
+// See Readme for a list of supported ones
+@import "foundation";
+
+
+body {
+  background: #e2ebf3;
+}
+
+.messageForm {
+  // position: relative;
+  // width: 40%;
+
+  form {
+    input {
+      width: 50%;
+    }
+    textarea {
+      width: 60%;
+      height: 100px;
+    }
+
+    small {
+      color: red;
+    }
+  }
+}

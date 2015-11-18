@@ -1,0 +1,14 @@
+<div class="messageForm row">
+  <h3>Contact Us</h3>
+  <form ng-submit="vm.submitForm(message)">
+    <input ng-model="message.name" placeholder="Sally Smith" >
+    <small>{{ nameMsg }}</small>
+    <input ng-model="message.email" placeholder="ssmith@gmail.com" >
+    <small>{{ emailMsg }}</small>
+    <input ng-model="message.address" placeholder="http://mssmith.net">
+    <small>{{ addressMsg }}</small>
+    <textarea ng-model="message.message" placeholder="A friendly message..."></textarea>
+    <small>{{ messageMsg }}</small>
+    <button>Submit</button>
+  </form>
+</div>
